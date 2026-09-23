@@ -1,0 +1,80 @@
+[profile]
+name = "research"
+
+[entity.email]
+action = "pseudo"
+[entity.phone_number]
+action = "pseudo"
+[entity.imei]
+action = "pseudo"
+[entity.imsi]
+action = "pseudo"
+[entity.iccid]
+action = "pseudo"
+[entity.serial_number]
+action = "pseudo"
+[entity.udid]
+action = "pseudo"
+[entity.android_id]
+action = "pseudo"
+[entity.mac_address]
+action = "pseudo"
+[entity.bssid]
+action = "pseudo"
+[entity.ssid]
+action = "pseudo"
+[entity.bluetooth_name]
+action = "pseudo"
+[entity.user_name]
+action = "pseudo"
+[entity.person_name]
+action = "pseudo"
+[entity.organization_name]
+action = "pseudo"
+[entity.gps_coordinate]
+action = "keep"
+[entity.cell_id]
+action = "keep"
+[entity.ipv4_public]
+action = "pseudo"
+[entity.ipv4_private]
+action = "keep"
+[entity.ipv6]
+action = "pseudo"
+[entity.domain_name]
+action = "pseudo"
+[entity.url]
+action = "pseudo"
+[entity.uuid]
+action = "pseudo"
+[entity.container_uuid]
+action = "pseudo"
+[entity.file_path_leaf]
+action = "pseudo"
+[entity.package_name]
+action = "keep"
+[entity.timestamp]
+action = "keep"
+[entity.carrier]
+action = "keep"
+
+[[section_rule]]
+match = "DUMP OF SERVICE location:"
+detect = ["gps", "package_name"]
+
+[[section_rule]]
+match = "DUMP OF SERVICE account:"
+detect = ["email", "user_name"]
+
+[[member_rule]]
+match = "logs/**/Safari*.db"
+action = "drop"
+reason = "browsing history still dropped in research"
+
+[[member_rule]]
+match = "**/*.{png,jpg,jpeg,gif,heic,webp}"
+action = "drop"
+reason = "image; always drop"
+
+[unknown_members]
+action = "drop"

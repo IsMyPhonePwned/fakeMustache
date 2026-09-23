@@ -1,0 +1,26 @@
+[package]
+name = "fm-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "fakeMustache CLI"
+default-run = "fakemustache"
+
+[[bin]]
+name = "fakemustache"
+path = "src/main.rs"
+
+[dependencies]
+fm-core = { workspace = true }
+fm-android = { workspace = true }
+fm-apple = { workspace = true }
+fm-container = { workspace = true }
+fm-format = { workspace = true }
+clap = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+serde_json = { workspace = true }
+
+[dev-dependencies]
+zip = { workspace = true }
+tempfile = "3"

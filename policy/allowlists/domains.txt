@@ -1,0 +1,16 @@
+# Domains kept untouched (IOC / infrastructure).
+googleapis.com
+google.com
+gstatic.com
+icloud.com
+apple.com
+cdn.jsdelivr.net
+cloudflare.com
+amazonaws.com
+mzstatic.com
+live.com
+microsoft.com
+facebook.com
+fbcdn.net
+crashlytics.com
+firebaseio.com

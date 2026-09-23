@@ -1,0 +1,17 @@
+# Seed allowlist of well-known packages (AOSP / GMS / major vendors).
+# Used by --pseudo-third-party-packages: these stay literal; others become com.anon.pkg*.
+com.android.settings
+com.android.systemui
+com.android.phone
+com.android.vending
+com.google.android.gms
+com.google.android.gsf
+com.google.android.apps.maps
+com.google.android.gm
+com.google.android.youtube
+com.google.android.permissioncontroller
+com.samsung.android.app.telephonyui
+com.sec.android.app.launcher
+com.apple.mobilemail
+com.apple.mobilesafari
+com.apple.Preferences

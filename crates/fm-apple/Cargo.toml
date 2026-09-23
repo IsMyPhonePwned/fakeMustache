@@ -1,0 +1,26 @@
+[package]
+name = "fm-apple"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "fakeMustache Apple sysdiagnose anonymization"
+
+[dependencies]
+fm-core = { workspace = true }
+fm-detect = { workspace = true }
+fm-format = { workspace = true }
+fm-container = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+
+[dev-dependencies]
+flate2 = { workspace = true }
+tar = { workspace = true }
+
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+# Optional path dep for logarchive JSONL (P5) — soft-fail if missing at compile via feature
+sysdiagnose_logarchive_decode = { path = "../../../sysdiagnose-extractor-library/logarchive-decode", optional = true }
+
+[features]
+default = []
+logarchive-decode = ["dep:sysdiagnose_logarchive_decode"]
